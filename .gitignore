@@ -19,7 +19,6 @@ env/
 .env
 .venv*
 
-*.csv
 *.xlsx
 *.json
 *.parquet
