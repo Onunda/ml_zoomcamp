@@ -4,13 +4,6 @@ import pandas as pd
 from h1_intro_ml.common.describe_data import print_overview, max_fuel_efficiency_asia, \
     overview_horsepower, sum_of_weights
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     data = pd.read_csv('data/car_fuel_efficiency_2026.csv')
     df = data
@@ -20,14 +13,11 @@ if __name__ == '__main__':
     if __name__ == '__main__':
         data = pd.read_csv('data/car_fuel_efficiency_2026.csv')
         df = data
-
-
         with open("homework1_output.txt", "w", encoding="utf-8") as f:
             with redirect_stdout(f):
                 print('Data overview')
                 print('..............................')
                 print_overview(df)
+                overview_horsepower(df)
                 max_fuel_efficiency_asia(df)
                 sum_of_weights(df)
-
-

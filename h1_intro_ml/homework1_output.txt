@@ -92,6 +92,15 @@ acceleration    264
 dtype: int64
 
 
+Median horsepower: 254.0
+Most frequent horsepower: 252.0
+...
+Missing values in 'horsepower' after filling: 0
+...
+Median horsepower after filling missing values: 252.0
+...
+
+
 Maximum fuel efficiency of cars from Asia: 41.2 MPG
 ...
 SUM OF WEIGHTS
@@ -138,3 +147,4 @@ Array y:
 [1100 1300  800  900 1000 1100 1200]
 result w: [0.13644777 0.2327492 ]
 sum of all the elements of the result w : 0.36919696904925486
+....................end.....................

@@ -94,3 +94,5 @@ def sum_of_weights(data_frame):
     print(f'result w: {w}')
     sum_w = np.sum(w)
     print(f'sum of all the elements of the result w : {sum_w}')
+    print('....................end.....................')
+
