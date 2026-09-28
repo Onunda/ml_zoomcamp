@@ -7,35 +7,27 @@ def print_overview(data_frame):
     print('## Data frame info:')
     print(data_frame.info())
     print('\n')
-
     print('## Data head and tail:')
     print(data_frame.head(5))
     print('...')
     print(data_frame.tail(5))
     print('\n')
-
     print('## Data frame columns:')
     for column in data_frame.columns:
         print(column)
+    print('\n')
     print('******************* Homework one start ****************')
     print('Panda version : ', pd.__version__)
     print('...')
-    print('\n')
-
     print('## Data frame shape:')
     print(f"Number of records in the dataset: {data_frame.shape[0]}")
     print('...')
     print(str(data_frame.shape[0]) + ' rows')
     print(str(data_frame.shape[1]) + ' columns')
     print('...')
-    print('\n')
-
-    # Number of unique fuel types
     unique_fuel_types = data_frame['fuel_type'].nunique()
     print(f"Number of unique fuel types: {unique_fuel_types}")
     print('...')
-    print('\n')
-
     # Check for missing values and list the columns
     missing_cols_count = (data_frame.isnull().sum() > 0).sum()
     print(f"Number of columns with missing values: {missing_cols_count}")

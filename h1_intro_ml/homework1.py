@@ -18,6 +18,6 @@ if __name__ == '__main__':
                 print('Data overview')
                 print('..............................')
                 print_overview(df)
-                overview_horsepower(df)
                 max_fuel_efficiency_asia(df)
+                overview_horsepower(df)
                 sum_of_weights(df)

@@ -54,23 +54,19 @@ horsepower
 vehicle_weight
 acceleration
 fuel_efficiency_mpg
+
+
 ******************* Homework one start ****************
 Panda version :  3.0.6
 ...
-
-
 ## Data frame shape:
 Number of records in the dataset: 10000
 ...
 10000 rows
 11 columns
 ...
-
-
 Number of unique fuel types: 3
 ...
-
-
 Number of columns with missing values: 2
 Missing values in each column :
 model_year               0
@@ -92,6 +88,8 @@ acceleration    264
 dtype: int64
 
 
+Maximum fuel efficiency of cars from Asia: 41.2 MPG
+...
 Median horsepower: 254.0
 Most frequent horsepower: 252.0
 ...
@@ -101,8 +99,6 @@ Median horsepower after filling missing values: 252.0
 ...
 
 
-Maximum fuel efficiency of cars from Asia: 41.2 MPG
-...
 SUM OF WEIGHTS
 Display Asian cars
 .........................................
