@@ -1,0 +1,140 @@
+Data overview
+..............................
+## Data frame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 10000 entries, 0 to 9999
+Data columns (total 11 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   model_year           10000 non-null  int64  
+ 1   origin               10000 non-null  str    
+ 2   fuel_type            10000 non-null  str    
+ 3   drivetrain           10000 non-null  str    
+ 4   num_doors            10000 non-null  int64  
+ 5   engine_displacement  10000 non-null  int64  
+ 6   num_cylinders        10000 non-null  int64  
+ 7   horsepower           9123 non-null   float64
+ 8   vehicle_weight       10000 non-null  int64  
+ 9   acceleration         9736 non-null   float64
+ 10  fuel_efficiency_mpg  10000 non-null  float64
+dtypes: float64(3), int64(5), str(3)
+memory usage: 859.5 KB
+None
+
+
+## Data head and tail:
+   model_year  origin  ... acceleration fuel_efficiency_mpg
+0        2006  Europe  ...          NaN                31.9
+1        2008  Europe  ...          NaN                31.3
+2        1996    Asia  ...         17.3                27.5
+3        1989  Europe  ...         18.7                28.5
+4        1994     USA  ...         17.5                31.0
+
+[5 rows x 11 columns]
+...
+      model_year origin  ... acceleration fuel_efficiency_mpg
+9995        2005    USA  ...         18.9                27.4
+9996        1993   Asia  ...         19.0                30.0
+9997        2014    USA  ...         18.4                28.1
+9998        2004    USA  ...         20.9                32.2
+9999        2011    USA  ...         17.6                30.2
+
+[5 rows x 11 columns]
+
+
+## Data frame columns:
+model_year
+origin
+fuel_type
+drivetrain
+num_doors
+engine_displacement
+num_cylinders
+horsepower
+vehicle_weight
+acceleration
+fuel_efficiency_mpg
+******************* Homework one start ****************
+Panda version :  3.0.6
+...
+
+
+## Data frame shape:
+Number of records in the dataset: 10000
+...
+10000 rows
+11 columns
+...
+
+
+Number of unique fuel types: 3
+...
+
+
+Number of columns with missing values: 2
+Missing values in each column :
+model_year               0
+origin                   0
+fuel_type                0
+drivetrain               0
+num_doors                0
+engine_displacement      0
+num_cylinders            0
+horsepower             877
+vehicle_weight           0
+acceleration           264
+fuel_efficiency_mpg      0
+dtype: int64
+...
+Columns with missing values and their counts:
+horsepower      877
+acceleration    264
+dtype: int64
+
+
+Maximum fuel efficiency of cars from Asia: 41.2 MPG
+...
+SUM OF WEIGHTS
+Display Asian cars
+.........................................
+    model_year origin  ... acceleration fuel_efficiency_mpg
+2         1996   Asia  ...         17.3                27.5
+6         1992   Asia  ...         21.7                26.8
+8         1997   Asia  ...         19.5                30.9
+10        1978   Asia  ...         19.5                26.8
+15        2007   Asia  ...         18.0                35.4
+
+[5 rows x 11 columns]
+Display Asian cars weight and model year
+.........................................
+    vehicle_weight  model_year
+2             4240        1996
+6             4310        1992
+8             4230        1997
+10            4420        1978
+15            3950        2007
+16            4750        2021
+22            4450        2019
+
+
+Shape of the NumPy array X:(7, 2)
+.........................................
+underlying NumPy array:[[4240 1996]
+ [4310 1992]
+ [4230 1997]
+ [4420 1978]
+ [3950 2007]
+ [4750 2021]
+ [4450 2019]]
+.........................................
+Transpose of X.T or matrix-matrix multiplication between the transpose of X and X:
+XTX: 
+ [[131950500  60750580]
+ [ 60750580  28041424]]
+Inversion of XTX: 
+ [[ 2.96830537e-06 -6.43071025e-06]
+ [-6.43071025e-06  1.39675281e-05]]
+Array y:
+[1100 1300  800  900 1000 1100 1200]
+result w: [0.13644777 0.2327492 ]
+sum of all the elements of the result w : 0.36919696904925486
