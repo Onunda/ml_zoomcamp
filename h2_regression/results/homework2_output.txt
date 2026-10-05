@@ -1,0 +1,92 @@
+Data overview
+..............................
+<class 'pandas.DataFrame'>
+RangeIndex: 10000 entries, 0 to 9999
+Data columns (total 11 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   model_year           10000 non-null  int64  
+ 1   origin               10000 non-null  str    
+ 2   fuel_type            10000 non-null  str    
+ 3   drivetrain           10000 non-null  str    
+ 4   num_doors            10000 non-null  int64  
+ 5   engine_displacement  10000 non-null  int64  
+ 6   num_cylinders        10000 non-null  int64  
+ 7   horsepower           9123 non-null   float64
+ 8   vehicle_weight       10000 non-null  int64  
+ 9   acceleration         9736 non-null   float64
+ 10  fuel_efficiency_mpg  10000 non-null  float64
+dtypes: float64(3), int64(5), str(3)
+memory usage: 859.5 KB
+None
+.......................................
+Missing values in each column:
+engine_displacement      0
+horsepower             877
+vehicle_weight           0
+model_year               0
+fuel_efficiency_mpg      0
+dtype: int64
+.....................................
+horsepower column nan value sum is:  877
+<class 'pandas.DataFrame'>
+.....................................
+1- Median (50% percentile) horsepower using quantile
+Median horsepower:254.0
+.....................................
+2- Median (50% percentile) horsepower through describe method 
+count    9123.000000
+mean      254.446016
+std        22.844613
+min       171.000000
+25%       239.000000
+50%       254.000000
+75%       270.000000
+max       334.000000
+Name: horsepower, dtype: float64
+.....................................
+<class 'pandas.DataFrame'>
+RangeIndex: 10000 entries, 0 to 9999
+Data columns (total 5 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   engine_displacement  10000 non-null  int64  
+ 1   horsepower           9123 non-null   float64
+ 2   vehicle_weight       10000 non-null  int64  
+ 3   model_year           10000 non-null  int64  
+ 4   fuel_efficiency_mpg  10000 non-null  float64
+dtypes: float64(2), int64(3)
+memory usage: 390.8 KB
+None
+.......................................
+size of df: 10000
+Validation size 20%: 2000
+Test size 20%:       2000
+Train size 60%:      6000
+.....................................
+************************************
+Seed 42 RMSE scores
+RMSE (Fill with 0):    2.205
+RMSE (Fill with Mean): 2.202
+************************************
+************************************
+Best r (minimum RSE) from [0, 0.01, 0.1, 1, 5, 10, 100]
+r = 0     | RMSE = 2.2053
+r = 0.01  | RMSE = 2.2053
+r = 0.1   | RMSE = 2.2053
+r = 1     | RMSE = 2.2053
+r = 5     | RMSE = 2.2053
+r = 10    | RMSE = 2.2053
+r = 100   | RMSE = 2.2053
+
+Best r: 0 with RMSE = 2.2053
+************************************
+************************************
+Seed selection:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] respective RMSE scores and standard deviation
+RMSE scores per seed: [2.239, 2.202, 2.163, 2.204, 2.202, 2.246, 2.27, 2.191, 2.217, 2.207]
+Standard deviation of scores: 0.029
+************************************
+************************************
+Seed nine Test RMSE scores
+Test RMSE: 2.236
+************************************

@@ -28,8 +28,7 @@ env/
 *.pkl
 *.pickle
 
-# Project specific
-results
+# Project specif
 pandas
 
 # Local GitLab CI/CD builds
