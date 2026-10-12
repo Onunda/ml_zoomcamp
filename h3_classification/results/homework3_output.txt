@@ -1,0 +1,113 @@
+Data overview
+..............................
+<class 'pandas.DataFrame'>
+RangeIndex: 5000 entries, 0 to 4999
+Data columns (total 9 columns):
+ #   Column                    Non-Null Count  Dtype  
+---  ------                    --------------  -----  
+ 0   lead_source               4852 non-null   str    
+ 1   industry                  4760 non-null   str    
+ 2   employment_status         4806 non-null   str    
+ 3   location                  4792 non-null   str    
+ 4   annual_income             4631 non-null   float64
+ 5   number_of_courses_viewed  5000 non-null   int64  
+ 6   interaction_count         5000 non-null   int64  
+ 7   lead_score                4965 non-null   float64
+ 8   converted                 5000 non-null   int64  
+dtypes: float64(2), int64(3), str(4)
+memory usage: 351.7 KB
+None
+.......................................
+size of df: 5000
+.......................................
+Missing values in each column:
+lead_source                 148
+industry                    240
+employment_status           194
+location                    208
+annual_income               369
+number_of_courses_viewed      0
+interaction_count             0
+lead_score                   35
+converted                     0
+dtype: int64
+                                       0  ...              4
+lead_source               organic_search  ...       referral
+industry                      technology  ...  manufacturing
+employment_status               employed  ...        student
+location                          europe  ...  north_america
+annual_income                    88160.0  ...        24062.0
+number_of_courses_viewed               3  ...              4
+interaction_count                      4  ...              5
+lead_score                          0.64  ...           0.62
+converted                              1  ...              1
+
+[9 rows x 5 columns]
+.......................................
+lead_source                     str
+industry                        str
+employment_status               str
+location                        str
+annual_income               float64
+number_of_courses_viewed      int64
+interaction_count             int64
+lead_score                  float64
+converted                     int64
+dtype: object
+Recheck columns if has any missing values after filling:
+.......................................
+Missing values in each column:
+lead_source                 0
+industry                    0
+employment_status           0
+location                    0
+annual_income               0
+number_of_courses_viewed    0
+interaction_count           0
+lead_score                  0
+converted                   0
+dtype: int64
+.......................................
+Mode for industry column is: technology
+.......................................
+                          annual_income  number_of_courses_viewed  interaction_count  lead_score  converted
+annual_income                  1.000000                  0.161300           0.122842    0.229496   0.189652
+number_of_courses_viewed       0.161300                  1.000000           0.721609    0.757204   0.395038
+interaction_count              0.122842                  0.721609           1.000000    0.915746   0.448624
+lead_score                     0.229496                  0.757204           0.915746    1.000000   0.483246
+converted                      0.189652                  0.395038           0.448624    0.483246   1.000000
+The two features with the biggest correlation: lead_score and interaction_count
+Correlation value being: 0.92
+----------------------------------------------
+Mutual Information Scores:
+lead_source: 0.03
+industry: 0.0
+employment_status: 0.02
+location: 0.0
+----------------------------------------------
+Logistic regression: Accuracy on the validation dataset: 0.65
+----------------------------------------------
+Feature Elimination Analysis:
+Without lead_source               -> Accuracy: 0.64200 | Difference: 0.00300
+Without industry                  -> Accuracy: 0.64500 | Difference: 0.00000
+Without employment_status         -> Accuracy: 0.64500 | Difference: 0.00000
+Without location                  -> Accuracy: 0.64500 | Difference: 0.00000
+Without annual_income             -> Accuracy: 0.72400 | Difference: -0.07900
+Without number_of_courses_viewed  -> Accuracy: 0.64300 | Difference: 0.00200
+Without interaction_count         -> Accuracy: 0.60100 | Difference: 0.04400
+Without lead_score                -> Accuracy: 0.64400 | Difference: 0.00100
+
+Feature with the smallest difference: number_of_courses_viewed
+Difference value: 0.002
+
+----------------------------------------------
+Train regularized logistic regression using C values: [0.000001, 0.00001, 0.0001, 0.001]):
+C = 0.000001 -> Accuracy: 0.598
+C = 0.000010 -> Accuracy: 0.598
+C = 0.000100 -> Accuracy: 0.613
+C = 0.001000 -> Accuracy: 0.645
+
+Best accuracy: 0.645
+Best C values with this accuracy: [0.001]
+Selected C (smallest among ties): 0.001
+----------------------------------------------
