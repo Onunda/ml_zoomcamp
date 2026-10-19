@@ -1,0 +1,69 @@
+Data overview
+..............................
+<class 'pandas.DataFrame'>
+RangeIndex: 5000 entries, 0 to 4999
+Data columns (total 9 columns):
+ #   Column                    Non-Null Count  Dtype  
+---  ------                    --------------  -----  
+ 0   lead_source               4852 non-null   str    
+ 1   industry                  4760 non-null   str    
+ 2   employment_status         4806 non-null   str    
+ 3   location                  4792 non-null   str    
+ 4   annual_income             4631 non-null   float64
+ 5   number_of_courses_viewed  5000 non-null   int64  
+ 6   interaction_count         5000 non-null   int64  
+ 7   lead_score                4965 non-null   float64
+ 8   converted                 5000 non-null   int64  
+dtypes: float64(2), int64(3), str(4)
+memory usage: 351.7 KB
+None
+.......................................
+Missing values in each column:
+lead_source                 148
+industry                    240
+employment_status           194
+location                    208
+annual_income               369
+number_of_courses_viewed      0
+interaction_count             0
+lead_score                   35
+converted                     0
+dtype: int64
+.......................................
+Recheck columns if has any missing values after filling:
+.......................................
+Missing values in each column:
+lead_source                 0
+industry                    0
+employment_status           0
+location                    0
+annual_income               0
+number_of_courses_viewed    0
+interaction_count           0
+lead_score                  0
+converted                   0
+dtype: int64
+.......................................
+AUC scores from highest to lowest:
+- lead_score: 0.788
+- interaction_count: 0.765
+- number_of_courses_viewed: 0.723
+- annual_income: 0.608
+----------------------------------------------
+Model AUC: 0.732
+----------------------------------------------
+The precision and recall curves intersect at threshold: 0.63
+----------------------------------------------
+Threshold: 0.21 | F1 Score: 0.739
+Threshold: 0.41 | F1 Score: 0.758
+Threshold: 0.61 | F1 Score: 0.745
+Threshold: 0.81 | F1 Score: 0.340
+-------------------------------------------
+Maximal F1 score: 0.758 achieved at threshold: 0.41
+----------------------------------------------
+C=0.000001 | Mean AUC: 0.617 ± 0.019
+C=0.001000 | Mean AUC: 0.749 ± 0.010
+C=1.000000 | Mean AUC: 0.732 ± 0.007
+----------------------------------------------
+C with best mean ROC AUC:1.0     
+Mean AUC:0.732 | Std:0.007
