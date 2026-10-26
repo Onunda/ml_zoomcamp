@@ -4,7 +4,6 @@ import sys
 import requests
 
 
-# 1. Tee class configured with append mode ("a") to preserve existing logs
 class Tee:
     def __init__(self, filename):
         self.terminal = sys.stdout
@@ -23,7 +22,6 @@ class Tee:
 os.makedirs("./output", exist_ok=True)
 sys.stdout = Tee("./output/homework5_output.txt")
 
-# 3. Define prediction test request
 url = "http://localhost:9696/predict"
 
 lead = {
