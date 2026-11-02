@@ -1,0 +1,77 @@
+Data overview- Car fuel efficiency data
+..............................
+<class 'pandas.DataFrame'>
+RangeIndex: 10000 entries, 0 to 9999
+Data columns (total 11 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   model_year           10000 non-null  int64  
+ 1   origin               10000 non-null  str    
+ 2   fuel_type            10000 non-null  str    
+ 3   drivetrain           10000 non-null  str    
+ 4   num_doors            10000 non-null  int64  
+ 5   engine_displacement  10000 non-null  int64  
+ 6   num_cylinders        10000 non-null  int64  
+ 7   horsepower           9123 non-null   float64
+ 8   vehicle_weight       10000 non-null  int64  
+ 9   acceleration         9736 non-null   float64
+ 10  fuel_efficiency_mpg  10000 non-null  float64
+dtypes: float64(3), int64(5), str(3)
+memory usage: 859.5 KB
+None
+.......................................
+Missing values in each column:
+model_year               0
+origin                   0
+fuel_type                0
+drivetrain               0
+num_doors                0
+engine_displacement      0
+num_cylinders            0
+horsepower             877
+vehicle_weight           0
+acceleration           264
+fuel_efficiency_mpg      0
+dtype: int64
+.......................................
+Recheck columns if has any missing values after filling:
+.......................................
+Missing values in each column:
+model_year             0
+origin                 0
+fuel_type              0
+drivetrain             0
+num_doors              0
+engine_displacement    0
+num_cylinders          0
+horsepower             0
+vehicle_weight         0
+acceleration           0
+fuel_efficiency_mpg    0
+dtype: int64
+.......................................
+1. One-hot or original feature used for splitting: model_year
+
+2. RMSE on Validation: 1.8332
+
+n_estimators=10: RMSE = 1.833
+n_estimators=50: RMSE = 1.774
+n_estimators=100: RMSE = 1.770
+n_estimators=150: RMSE = 1.769
+3. Lowest RMSE at n_estimators = 150
+
+max_depth=10: Mean RMSE = 1.7544
+max_depth=15: Mean RMSE = 1.7842
+max_depth=20: Mean RMSE = 1.7868
+max_depth=25: Mean RMSE = 1.7863
+4. Best max_depth by mean RMSE = 10
+
+vehicle_weight: 0.2033
+horsepower: 0.0783
+acceleration: 0.0550
+engine_displacement: 0.0613
+5. Most important feature: vehicle_weight
+
+eta=0.3: Validation RMSE = 1.8265
+eta=0.1: Validation RMSE = 1.7248
+6. Best eta with lowest RMSE: 0.1 (RMSE = 1.7248)
